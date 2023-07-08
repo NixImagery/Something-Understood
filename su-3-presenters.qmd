@@ -1,0 +1,26 @@
+## The Presenters
+
+Sir Mark Tully was the regular presenter of the programme until production was ended in 2019 but there have been other presenters who have contributed a dozen or more episodes over the years.
+
+```{r df-SU, include = FALSE} 
+df_su <- read.csv("../PhD/Data/su.csv")
+```
+
+```{r 22-presenter-timeline, echo=FALSE, message=F, fig.height=3}
+library(magrittr)
+library(dplyr)
+library(ggplot2)
+
+df1 <- df_su[df_su$Presenter != "",] %>%
+    select(Presenter, Production, First.broadcast)
+df2 <- df1 %>% 
+    group_by(Presenter) %>%
+    summarise(Episodes=n())
+dfm <- merge(x = df2[df2$Episodes > 11,], y = df1, by = "Presenter")
+ggplot(dfm[dfm$Presenter != "",], aes(x = as.Date(First.broadcast, format = "%d/%m/%Y"), y = Presenter, colour = Production))  + 
+  geom_point(size = 2) +
+  labs(x = "First Broadcast", y = "Presenter") +
+  ggtitle("Principal Presenters")
+
+knitr::kable(df2[df2$Episodes < 6,], caption="*Something Understood*, other presenters")
+```

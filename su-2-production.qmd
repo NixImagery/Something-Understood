@@ -1,0 +1,36 @@
+# Production
+
+```{r df-SU, include = FALSE} 
+df_su <- read.csv("../PhD/Data/su.csv")
+```
+
+After what appears to be a short pilot sequence, the series was originated by Unique, the Production Company [@LOFTUS2007]. It began with daily weekday broadcasts [@BBC-genome-su] for the first six weeks before becoming a weekly broadcast in April 1995 with a new presenter, Mark Tully, in which "Through music, verse, prose and conversation, he probes questions he believes lie at the heart of our humanity." [@BBC-genome-su, 2]
+
+*Unique* productions was a division of UBC Media, in 2014 becoming *7digital* in a merger [@WP-UBC-media; @archive-org-7digital]. Under these two production names, there are `r sum(df_su$Production == "Unique", df_su$Production == "7digital")` episodes.
+
+These graphics show the share of episodes and distribution over time of each of the production companies.
+
+```{r 22-df-production, out.width="100%", echo=FALSE, fig.height=3}
+library(ggplot2)
+
+ggplot(df_su[df_su$Production != "",], aes(x = Production, fill = Production)) + 
+  geom_bar() +
+  labs(x = "Known production companies") 
+```
+  
+```{r 22-df-production2, out.width="100%", echo=FALSE, fig.height=3}
+ggplot(df_su[df_su$Production != "",], aes(x = as.Date(First.broadcast, format = "%d/%m/%Y"), y = Production, colour = Production))  + 
+  geom_point(size = 2) +
+  theme(legend.position = "none")  +
+  labs(x = "First Broadcast", y = "Production Company")
+```
+
+It is interesting to notice, in cataloguing the episodes, that readers of one episode sometimes become presenters of another (e.g. Adjoa Andoh in *[Changing the Mirror](https://www.bbc.co.uk/programmes/b065rv5m)*); presenters and producers appear as readers (e.g. John McAndrew and Frank Stirling in *[Translation](https://www.bbc.co.uk/programmes/b04bmd39)*) or composers (e.g. Michael Zev Gordon in *[Impermanence](https://www.bbc.co.uk/programmes/b0414bzs)*). There are a number of episodes on the BBC website that state the production company without naming a producer, although a producer is listed with the readers (e.g. Frank Stirling in the Unique production *[The Pearl of Great Price](https://www.bbc.co.uk/programmes/b00qfzln)*).
+
+Occasional special editions of the programme deviate from the usual approach but follow the familiar format. For example, in *[A Language That Speaks The Truth](https://www.bbc.co.uk/programmes/b014m6qx)*, the words of broadcaster Studs Terkel speaking shortly before his death are connected with readings and music known to have been valued by him. In this example, two experienced producers, Eleanor McDowall & Alan Hall created the programme.
+
+<!-- ```{r 22-df-production-table, echo=FALSE, message=F}
+knitr::kable(df_su %>% 
+  group_by(Producer, Production) %>% 
+  summarise(Count = n()), caption="*Something Understood* episode producers")
+``` -->

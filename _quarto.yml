@@ -1,5 +1,8 @@
 project:
   type: book
+  output-dir: docs
+  preview:
+    port: 4400
 
 book:
   title: "Something Understood"
@@ -8,10 +11,19 @@ book:
   date-format: "Do MMM YYYY"
   chapters:
     - index.qmd
-    - intro.qmd
-  appendices: 
+    - su-1-episodes.qmd
+    - su-2-production.qmd
+    - su-3-presenters.qmd
+    - su-7-episodes.qmd
     - references.qmd
+  # appendices: 
+  cover-image: p0c4lm59.jpg
   favicon: favicon.ico
+  search: true
+  # repo-url: https://github.com/NixImagery/Something-Understood
+  # repo-actions: [edit]
+  downloads: [pdf]
+  # sharing: [twitter, facebook, linkedin]
   # site-url: https://static.cullaloe.net/PGDEPrimary
   twitter-card: true
   navbar: 
@@ -45,8 +57,8 @@ csl: /Users/v1nhood/Library/CloudStorage/Dropbox/styles/chicago-author-date-with
 format:
   html:
     theme: spacelab
-  pdf:
-    documentclass: amsart
+  pdf: 
+    documentclass: scrbook
     geometry: margin=2cm, bindingoffset=0.5cm
     pagestyle: headings
     papersize: a4

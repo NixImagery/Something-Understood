@@ -1,0 +1,49 @@
+## Episodes list {#su-episode-list}
+```{r df-SU, include = FALSE} 
+df_su <- read.csv("../PhD/Data/su.csv")
+```
+
+I have catalogued `r nrow(df_su)` episodes so far and acquired `r sum(df_su$file, na.rm = TRUE)` as sound files.
+
+<!-- The episode b00h3xw8 on running was downloaded on 8 Feb 2022 as 01/02/2009, pid m00148j5. -->
+
+```{r draw-SU-known-episodes, echo=FALSE} 
+
+# df_su <- na.omit(df_su[df_su$file=="TRUE",])
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Clean empty production fields
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+df_su$Production <- ifelse(df_su$Production == "", "*unknown*", df_su$Production) 
+df_su$Producer <- ifelse(df_su$Producer == "", "*unknown*", df_su$Producer) 
+df_su$Presenter <- ifelse(df_su$Presenter == "", "*not listed*", df_su$Presenter) 
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Derived fields
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Make a title with the Programme Page Link if there's a PID available
+
+df_su$Plink <- ifelse(df_su$PID=="", df_su$Title, paste('[',df_su$Title,'](','https://www.bbc.co.uk/programmes/', df_su$PID, ' "BBC Programme website" )', sep="")) 
+
+# Add a link to the archive page if it exists (based on date range)
+
+df_su$First.broadcast <- as.Date(df_su$First.broadcast, "%d/%m/%Y")
+
+df_su$Plink <- ifelse((df_su$First.broadcast >= "2005-10-02") & (df_su$First.broadcast <= "2009-03-29"), paste(df_su$Plink, ' ([*alt.*](','https://www.bbc.co.uk/radio4/religion/somethingunderstood_', format(df_su$First.broadcast,"%Y%m%d"),'.shtml "BBC archive page for this episode"))', sep=""), df_su$Plink)
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Listing of programme episodes with a pretty date
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+df_su$FBDate <- format(as.Date(df_su$First.broadcast, "%d/%m/%Y"),format="%d %b %Y")
+
+knitr::kable(df_su
+  [order(df_su$Title, as.Date(df_su$First.broadcast,"%d/%m/%Y")),]
+  [c("Plink","FBDate","Presenter")], 
+  caption="Episodes of *Something Understood*", 
+  row.names = FALSE, 
+  col.names = c("Title","First Broadcast","Presenter"), 
+  booktabs=TRUE, label=NA, longtable=TRUE, format="pipe")
+
+```

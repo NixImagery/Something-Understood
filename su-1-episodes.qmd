@@ -1,0 +1,21 @@
+# Episodes
+
+```{r df-SU, include = FALSE} 
+df_su <- read.csv("../PhD/Data/su.csv")
+```
+
+*Something Understood* broadcast weekly from 1995 for 24 years [@Chisholm2019] before new production was cut by the BBC, although they kept the series running on repeats. At 50 episodes a year, that might make for a catalogue of up to 1,200 programmes but I have only identified `r nrow(df_su)` so far [@BBC-genome-su; @BBCR4-su-website; @LOFTUS2007].
+
+## Acquiring a list of episodes
+
+A [list of episodes](#su-episode-list) of *Something Understood* was obtained from the BBC's *Something Understood* website [@BBCR4-su-website]. A database was constructed using a simple `csv` (comma-separated variable) text-based format which includes episode information and the BBC's unique programme identifier or `PID`. `r sum(df_su$PID!="")` episodes broadcast since February 2007 are listed and have their own page and `PID`. A column `Plink` is derived in the dataset to provide a hyperlink to these programme websites. Links to BBC archive pages for episodes broadcast between 2 October 2005 and 29 March 2009 [@BBC-archive-su] are generated and displayed with (*alt.*). Data captured from these pages is in the `Archive-details` column: it comprises more running order than a description of the programme.
+
+Earlier programmes were located in the BBC's Genome project site [@BBC-genome-su] and @LOFTUS2007.
+
+## Cataloguing and describing episodes
+
+Broadcast and production information, along with episode descriptions has been obtained between July and October 2021 for all of the `r sum(df_su$PID!="")` known episodes on the BBC Proramme website [@BBCR4-su-website]. This process of cataloguing includes cleaning of the data on import escaping text where appropriate. This information has been cross-checked with the BBC's Genome Project [@BBC-genome-su] and the *Something Understood* Archive pages [@BBC-archive-su]. `r nrow(df_su)` episodes have been identified so far but the exercise is not yet complete (and may never be, I am doing other things at present).
+
+It is possible that there are discrepancies between the production company records and the BBC's index [@BBC-genome-su] but the latter is scraped from OCR[^tla-ocr]'d paper copies of *The Radio Times* with crowd-sourced corrections and additions, as well as more recent programme schedule information. Some manual correction of OCR scanning errors is required, mostly to spelling of names or obvious errors like "I caught a Rsh". 
+
+[^tla-ocr]: OCR = optical character recognition scans
