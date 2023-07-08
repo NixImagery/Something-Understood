@@ -1,0 +1,54 @@
+project:
+  type: book
+
+book:
+  title: "Something Understood"
+  author: "Nick Hood"
+  date: today
+  date-format: "Do MMM YYYY"
+  chapters:
+    - index.qmd
+    - intro.qmd
+  appendices: 
+    - references.qmd
+  favicon: favicon.ico
+  # site-url: https://static.cullaloe.net/PGDEPrimary
+  twitter-card: true
+  navbar: 
+    background: primary
+    search: true
+    right:
+      - icon: github
+        href: https://github.com/NixImagery
+      - icon: instagram
+        href: https://www.instagram.com/niximagery/
+      - icon: twitter
+        href: https://twitter.com/NixImagery
+  page-footer: 
+    left: "Copyright 2023, Nick Hood." 
+    background: light
+    right: 
+      - icon: github
+        href: https://github.com/NixImagery
+      - icon: instagram
+        href: https://www.instagram.com/niximagery/
+      - icon: twitter 
+        href: https://twitter.com/NixImagery
+  page-navigation: true
+  sidebar:
+    contents: auto
+  google-analytics: G-YX45X35ZM7
+
+bibliography: /Users/v1nhood/Library/CloudStorage/Dropbox/Bibliographies/PhD.bib
+csl: /Users/v1nhood/Library/CloudStorage/Dropbox/styles/chicago-author-date-with-ibid.csl
+
+format:
+  html:
+    theme: spacelab
+  pdf:
+    documentclass: amsart
+    geometry: margin=2cm, bindingoffset=0.5cm
+    pagestyle: headings
+    papersize: a4
+    fontfamily: roboto
+    fontfamilyoptions: sfdefault, light
