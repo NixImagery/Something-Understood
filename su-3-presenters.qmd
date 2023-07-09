@@ -22,5 +22,5 @@ ggplot(dfm[dfm$Presenter != "",], aes(x = as.Date(First.broadcast, format = "%d/
   labs(x = "First Broadcast", y = "Presenter") +
   ggtitle("Principal Presenters")
 
-knitr::kable(df2[df2$Episodes < 6,], caption="*Something Understood*, other presenters")
+knitr::kable(df2[df2$Episodes < 12,], caption="*Something Understood*, other presenters")
 ```

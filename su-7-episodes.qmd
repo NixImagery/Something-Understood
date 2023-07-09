@@ -1,4 +1,7 @@
-## Episodes list {#su-episode-list}
+---
+page-layout: full
+---
+# Episodes list {#su-episode-list}
 ```{r df-SU, include = FALSE} 
 df_su <- read.csv("../PhD/Data/su.csv")
 ```
@@ -40,10 +43,10 @@ df_su$FBDate <- format(as.Date(df_su$First.broadcast, "%d/%m/%Y"),format="%d %b 
 
 knitr::kable(df_su
   [order(df_su$Title, as.Date(df_su$First.broadcast,"%d/%m/%Y")),]
-  [c("Plink","FBDate","Presenter")], 
+  [c("Plink","FBDate","Presenter", "Producer")], 
   caption="Episodes of *Something Understood*", 
   row.names = FALSE, 
-  col.names = c("Title","First Broadcast","Presenter"), 
+  col.names = c("Title","First Broadcast","Presenter", "Producer"), 
   booktabs=TRUE, label=NA, longtable=TRUE, format="pipe")
 
 ```

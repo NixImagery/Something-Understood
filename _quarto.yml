@@ -15,6 +15,7 @@ book:
     - su-2-production.qmd
     - su-3-presenters.qmd
     - su-7-episodes.qmd
+    - su-8-themes.qmd
     - references.qmd
   # appendices: 
   cover-image: p0c4lm59.jpg
@@ -22,7 +23,7 @@ book:
   search: true
   # repo-url: https://github.com/NixImagery/Something-Understood
   # repo-actions: [edit]
-  downloads: [pdf]
+  # downloads: [pdf]
   # sharing: [twitter, facebook, linkedin]
   site-url: https://cullaloe.com/Something-Understood
   twitter-card: true
@@ -57,10 +58,10 @@ csl: /Users/v1nhood/Library/CloudStorage/Dropbox/styles/chicago-author-date-with
 format:
   html:
     theme: yeti
-  pdf: 
-    documentclass: scrbook
-    geometry: margin=2cm, bindingoffset=0.5cm
-    pagestyle: headings
-    papersize: a4
-    fontfamily: roboto
-    fontfamilyoptions: sfdefault, light
+  # pdf: 
+  #   documentclass: scrbook
+  #   geometry: margin=2cm, bindingoffset=0.5cm
+  #   pagestyle: headings
+  #   papersize: a4
+  #   fontfamily: roboto
+  #   fontfamilyoptions: sfdefault, light
