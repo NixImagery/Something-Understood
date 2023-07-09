@@ -4,4 +4,4 @@ As an educator, the BBC radio programme *Something Understood* fascinates me. It
 
 That perceived pedagogy is the subject of my current, part-time doctoral research project being conducted at the University of Edinburgh under the supervision of [Dr. Mike Lynch](https://www.ed.ac.uk/profile/michael-lynch) and [Dr. James Lamb](https://www.ed.ac.uk/profile/james-lamb).
 
-These files were created from the BBC archive and other places and are shared here in the public interest, for anyone who might be interested.
+These files were created from the BBC archive and other places and are shared here in the public interest, for anyone who might be interested. The site is not endorsed by, nor connected with, the producers or presenters of the programme.
