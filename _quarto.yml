@@ -21,9 +21,9 @@ book:
   cover-image: p0c4lm59.jpg
   favicon: favicon.ico
   search: true
-  # repo-url: https://github.com/NixImagery/Something-Understood
+  repo-url: https://github.com/NixImagery/Something-Understood
   # repo-actions: [edit]
-  # downloads: [pdf]
+  downloads: [pdf]
   # sharing: [twitter, facebook, linkedin]
   site-url: https://cullaloe.com/Something-Understood
   twitter-card: true
@@ -31,8 +31,8 @@ book:
     background: primary
     search: true
     right:
-      - icon: github
-        href: https://github.com/NixImagery
+      # - icon: github
+      #   href: https://github.com/NixImagery
       - icon: instagram
         href: https://www.instagram.com/niximagery/
       - icon: twitter
@@ -58,10 +58,10 @@ csl: /Users/v1nhood/Library/CloudStorage/Dropbox/styles/chicago-author-date-with
 format:
   html:
     theme: yeti
-  # pdf: 
-  #   documentclass: scrbook
-  #   geometry: margin=2cm, bindingoffset=0.5cm
-  #   pagestyle: headings
-  #   papersize: a4
-  #   fontfamily: roboto
-  #   fontfamilyoptions: sfdefault, light
+  pdf: 
+    documentclass: scrbook
+    geometry: margin=2cm, bindingoffset=0.5cm
+    pagestyle: headings
+    papersize: a4
+    fontfamily: roboto
+    fontfamilyoptions: sfdefault, light
