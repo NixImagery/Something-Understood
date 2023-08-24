@@ -42,7 +42,7 @@ df_su$Plink <- ifelse((df_su$First.broadcast >= "2005-10-02") & (df_su$First.bro
 df_su$FBDate <- format(as.Date(df_su$First.broadcast, "%d/%m/%Y"),format="%d %b %Y")
 
 knitr::kable(df_su
-  [order(df_su$Title, as.Date(df_su$First.broadcast,"%d/%m/%Y")),]
+  [order(as.Date(df_su$First.broadcast,"%d/%m/%Y"), decreasing=TRUE, df_su$Title),]
   [c("Plink","FBDate","Presenter", "Producer")], 
   caption="Episodes of *Something Understood*", 
   row.names = FALSE, 
