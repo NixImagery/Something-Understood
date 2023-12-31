@@ -12,7 +12,8 @@ df_su <- read.csv("../PhD/Data/su.csv")
 
 sucorpus <- corpus(df_su, text_field = "Description")
 tk <- tokens(sucorpus, remove_punct = TRUE, remove_numbers = TRUE)
-dfmsu <- dfm(tokens_remove(tokens_remove(tk, c("<","BR","/",">")), pattern = stopwords("en")))
+dfmsu <- dfm(tokens_remove(tokens_remove(tk, c("can","readers","programme","<","BR","/",">")), pattern = stopwords("en")))
+dfmsu <- dfm_trim(dfmsu,min_termfreq=24)
 # themes <- dfmsu %>%
 #   textstat_frequency() %>%
 #   head(6)
