@@ -1,7 +1,7 @@
 # Episodes
 
 ```{r df-SU, include = FALSE} 
-df_su <- read.csv("../PhD/Data/su.csv")
+df_su <- read.csv("su.csv")
 ```
 
 *Something Understood* broadcast weekly from 1995 for 24 years [@Chisholm2019] before new production was cut by the BBC, although they kept the series running on repeats. At 50 episodes a year, that might make for a catalogue of up to 1,200 programmes but I have only identified `r nrow(df_su)` so far [@BBC-genome-su; @BBCR4-su-website; @LOFTUS2007].

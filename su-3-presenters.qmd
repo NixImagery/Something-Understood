@@ -3,7 +3,7 @@
 Sir Mark Tully was the regular presenter of the programme until production was ended in 2019 but there have been other presenters who have contributed a dozen or more episodes over the years.
 
 ```{r df-SU, include = FALSE} 
-df_su <- read.csv("../PhD/Data/su.csv")
+df_su <- read.csv("su.csv")
 ```
 
 ```{r 22-presenter-timeline, echo=FALSE, message=F, fig.height=3}

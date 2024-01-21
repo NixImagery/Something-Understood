@@ -3,7 +3,7 @@ page-layout: full
 ---
 # Episodes list {#su-episode-list}
 ```{r df-SU, include = FALSE} 
-df_su <- read.csv("../PhD/Data/su.csv")
+df_su <- read.csv("su.csv")
 ```
 
 I have catalogued `r nrow(df_su)` episodes so far and acquired `r sum(df_su$file, na.rm = TRUE)` as sound files.

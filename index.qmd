@@ -1,3 +1,8 @@
+---
+page-layout: full
+toc: false
+---
+
 # Introduction {.unnumbered}
 
 As an educator, the BBC radio programme *Something Understood* fascinates me. It was broadcast weekly from 1995 for 24 years early on a Sunday morning and again late on Sunday night. Listening to the programme in the dark at the end of the weekend, thinking about my week ahead as a physics teacher, I often thought I perceived a pedagogy. From the soundscape of the half-hour episodes, new understanding emerged in the darkness. 
@@ -8,10 +13,22 @@ These files were created from the BBC archive and other places and are shared he
 
 ## The author {-}
 
-I am Nick Hood, a Lecturer at Edinburgh University and as well as this project, I maintain interest in imagery, programming and artificial intelligence. 
+I am Nick Hood, a doctoral researcher at Edinburgh University, and Fellow of the Institute of Physics. 
 
-[Edinburgh Staff Profile](https://www.ed.ac.uk/profile/nick-hood) | 
 [Edinburgh Student Profile](https://www.ed.ac.uk/profile/nick-hood-student) | 
 [ORCID](https://orcid.org/0000-0001-7891-9736) | 
-[NixImagery](https://niximagery.com/) | 
-[Technical blog](https://cullaloe.com/)
+[Portal](https://cullaloe.net/)
+
+<!-- 
+```
+History file can be found by 
+
+$ cat .get_iplayer/download_history >> suh.md
+
+Paste the following in the header lines to make a nice table:
+
+PID|Prog name|Title|Type|no.|resn.|Location|fmt|size|Description|chan|genre|image|blank|URL|Episode
+---|-------|:------|---|---|---|---|---|---|:----------|----|:----|---|:----|---|---
+
+```
+ -->

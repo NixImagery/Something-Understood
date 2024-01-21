@@ -1,7 +1,7 @@
 # Production
 
 ```{r df-SU, include = FALSE} 
-df_su <- read.csv("../PhD/Data/su.csv")
+df_su <- read.csv("su.csv")
 ```
 
 After what appears to be a short pilot sequence, the series was originated by Unique, the Production Company [@LOFTUS2007]. It began with daily weekday broadcasts [@BBC-genome-su] for the first six weeks before becoming a weekly broadcast in April 1995 with a new presenter, Mark Tully, in which "Through music, verse, prose and conversation, he probes questions he believes lie at the heart of our humanity." [@BBC-genome-su, 2]

@@ -8,7 +8,7 @@ library("quanteda.textmodels")
 library("quanteda.textstats")
 library("quanteda.textplots")
 
-df_su <- read.csv("../PhD/Data/su.csv")
+df_su <- read.csv("su.csv")
 
 sucorpus <- corpus(df_su, text_field = "Description")
 tk <- tokens(sucorpus, remove_punct = TRUE, remove_numbers = TRUE)

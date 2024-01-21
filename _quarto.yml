@@ -52,8 +52,8 @@ book:
     contents: auto
   google-analytics: G-HRRCR9KGPW
 
-bibliography: /Users/v1nhood/Library/CloudStorage/Dropbox/Bibliographies/PhD.bib
-csl: /Users/v1nhood/Library/CloudStorage/Dropbox/styles/chicago-author-date-with-ibid.csl
+bibliography: ../Dropbox/Bibliographies/PhD.bib
+csl: ../Dropbox/styles/chicago-author-date-with-ibid.csl
 
 format:
   html:
