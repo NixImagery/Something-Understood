@@ -1,14 +1,16 @@
-# Episodes
+# Episodes {-}
 
 ```{r df-SU, include = FALSE} 
 df_su <- read.csv("su.csv")
 ```
 
-*Something Understood* broadcast weekly from 1995 for 24 years [@Chisholm2019] before new production was cut by the BBC, although they kept the series running on repeats. At 50 episodes a year, that might make for a catalogue of up to 1,200 programmes but I have only identified `r nrow(df_su)` so far [@BBC-genome-su; @BBCR4-su-website; @LOFTUS2007].
+*Something Understood* broadcast weekly from 1995 for 24 years [@Chisholm2019] before new production was cut by the BBC. They kept the series running on repeats until Easter 2024 when it was apparently quietly removed[^end] from the schedule. At 50 episodes a year, that might make for a catalogue of up to 1,200 programmes but I have only identified `r nrow(df_su)` so far [@BBC-genome-su; @BBCR4-su-website; @LOFTUS2007].
+
+[^end]: It is possibly significant that the last episode broadcast was a repeat of the last original episode made, with Sir Mark Tully himself "striking a valedictory note" with [*In My End Is My Beginning*](https://www.bbc.co.uk/programmes/m0004dwy).
 
 ## Acquiring a list of episodes
 
-A [list of episodes](#su-episode-list) of *Something Understood* was obtained from the BBC's *Something Understood* website [@BBCR4-su-website]. A database was constructed using a simple `csv` (comma-separated variable) text-based format which includes episode information and the BBC's unique programme identifier[^pid-note] or `PID`. `r sum(df_su$PID!="")` episodes broadcast since February 2007 are listed and have their own page and `PID`. A column `Plink` is derived in the dataset to provide a hyperlink to these programme websites. Links to BBC archive pages for episodes broadcast between 2 October 2005 and 29 March 2009 [@BBC-archive-su] are generated and displayed with (*alt.*). Data captured from these pages is in the `Archive-details` column: it comprises more running order than a description of the programme.
+A [list of episodes](#su-episode-list) of *Something Understood* was obtained from the BBC's *Something Understood* website [@BBCR4-su-website]. A database was constructed using a simple `csv` (comma-separated variable) text-based format which includes episode information and the BBC's unique programme identifier[^pid-note] or `PID`. `r sum(df_su$PID!="")` episodes broadcast since February 2007 are listed and have their own page and `PID`. A column is derived in the dataset to provide a hyperlink to these programme websites. Links to BBC archive pages for episodes broadcast between 2 October 2005 and 29 March 2009 [@BBC-archive-su] are generated and displayed with (*alt.*). Data captured from these pages is in the `Archive-details` column: it comprises more running order than a description of the programme.
 
 [^pid-note]: With the at least one of the repeats being aired in 2023-4, I noticed (in December 2023) that a new PID has been allocated, for which I have created a duplication in the database. I have kept these distinct for now, because in these cases, the BBC are maintaining separate episode pages, for example, *Stories of the Nativity* has [b00wnrw8](https://www.bbc.co.uk/programmes/b00wnrw8) and [m001v7kd](https://www.bbc.co.uk/programmes/m001v7kd). These are the same episode, as far as I can tell.
 

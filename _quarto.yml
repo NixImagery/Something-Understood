@@ -38,7 +38,7 @@ book:
       # - icon: twitter
       #   href: https://twitter.com/NixImagery
   page-footer: 
-    left: "Copyright 2023, Nick Hood." 
+    left: "Copyright 2024, Nick Hood." 
     background: light
     right: 
       - icon: github
@@ -58,6 +58,9 @@ csl: ../Dropbox/styles/chicago-author-date-with-ibid.csl
 format:
   html:
     theme: yeti
+    page-layout: full
+    toc: false
+    number-depth: 0
   pdf: 
     documentclass: scrbook
     geometry: margin=2cm, bindingoffset=0.5cm
