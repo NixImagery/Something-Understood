@@ -20,7 +20,7 @@ book:
   # appendices: 
   cover-image: p0c4lm59.jpg
   favicon: favicon.ico
-  search: false
+  # search: false
   repo-url: https://github.com/NixImagery/Something-Understood
   # repo-actions: [edit]
   downloads: [pdf]
