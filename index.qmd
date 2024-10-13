@@ -13,13 +13,12 @@ These files were created from the BBC archive and other places and are shared he
 
 ## The author {-}
 
-**Nick Hood**  
+**Nick Hood**, CPhys FInstP MRAeS SFHEA  
 Edinburgh University  
-Fellow of the Institute of Physics
 
-[Edinburgh Student Profile](https://www.ed.ac.uk/profile/nick-hood-student) | 
+[Edinburgh Student Profile](https://www.ed.ac.uk/profile/nick-hood) | 
 [ORCID](https://orcid.org/0000-0001-7891-9736) | 
-[Portal](https://cullaloe.net/)
+[Portal](https://sptr.net/)
 
 <!-- 
 ```
