@@ -20,13 +20,9 @@ book:
   # appendices: 
   cover-image: p0c4lm59.jpg
   favicon: favicon.ico
-  # search: false
   repo-url: https://github.com/NixImagery/Something-Understood
-  # repo-actions: [edit]
   downloads: [pdf]
-  # sharing: [twitter, facebook, linkedin]
   site-url: https://niximagery.github.io/Something-Understood
-  # twitter-card: true
   navbar: 
     background: primary
     search: true
@@ -35,8 +31,6 @@ book:
         href: https://github.com/NixImagery
       - icon: linkedin
         href: https://www.linkedin.com/in/niximagery/
-      # - icon: twitter
-      #   href: https://twitter.com/NixImagery
   page-footer: 
     left: "Copyright 2024, Nick Hood." 
     background: light
@@ -45,15 +39,13 @@ book:
         href: https://github.com/NixImagery
       - icon: linkedin
         href: https://www.linkedin.com/in/niximagery/
-      # - icon: twitter 
-      #   href: https://twitter.com/NixImagery
   page-navigation: true
   sidebar:
     contents: auto
   google-analytics: G-HRRCR9KGPW
 
-bibliography: ../Dropbox/Bibliographies/PhD.bib
-csl: ../Dropbox/styles/chicago-author-date-with-ibid.csl
+bibliography: ../Thesis/thesis.bib
+csl: ../Thesis/chicago-author-date-with-ibid.csl
 
 format:
   html:

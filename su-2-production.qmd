@@ -4,9 +4,9 @@
 df_su <- read.csv("su.csv")
 ```
 
-After what appears to be a short pilot sequence, the series was originated by Unique, the Production Company [@LOFTUS2007]. It began with daily weekday broadcasts [@BBC-genome-su] for the first six weeks before becoming a weekly broadcast in April 1995 with a new presenter, Mark Tully, in which "Through music, verse, prose and conversation, he probes questions he believes lie at the heart of our humanity." [@BBC-genome-su, 2]
+After what appears to be a short pilot sequence, the series was originated by Unique, the Production Company [@LOFTUS2007]. It began with daily weekday broadcasts [@BBCb] for the first six weeks before becoming a weekly broadcast in April 1995 with a new presenter, Mark Tully, in which "Through music, verse, prose and conversation, he probes questions he believes lie at the heart of our humanity." [@BBCb, 2]
 
-*Unique* productions was a division of UBC Media, in 2014 becoming *7digital* in a merger [@WP-UBC-media; @archive-org-7digital]. Under these two production names, there are `r sum(df_su$Production == "Unique", df_su$Production == "7digital")` episodes.
+*Unique* productions was a division of UBC Media, in 2014 becoming *7digital* in a merger [@UBCMedia2014]. Under these two production names, there are `r sum(df_su$Production == "Unique", df_su$Production == "7digital")` episodes.
 
 These graphics show the share of episodes and distribution over time of each of the production companies.
 
