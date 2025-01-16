@@ -6,6 +6,7 @@ project:
 
 book:
   title: "Something Understood"
+  subtitle: Information about the BBC Radio 4 programme
   author: "Nick Hood"
   date: today
   date-format: "Do MMM YYYY"

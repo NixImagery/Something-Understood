@@ -1,25 +1,41 @@
 # Themes and key terms {-}
 
+::: {.grid}
+
+::: {.g-col-4}
+
 Using the programme descriptions as a corpus, the most frequently occurring words may be plotted as a "word cloud". Draw your own conclusions.
+:::
+::: {.g-col-8}
 
 ```{r df-SU, include = FALSE} 
-library("quanteda")
-library("quanteda.textmodels")
-library("quanteda.textstats")
-library("quanteda.textplots")
+library("tm")
+library("SnowballC")
+library("wordcloud")
+library("RColorBrewer")
 
 df_su <- read.csv("su.csv")
 
-sucorpus <- corpus(df_su, text_field = "Description")
-tk <- tokens(sucorpus, remove_punct = TRUE, remove_numbers = TRUE)
-dfmsu <- dfm(tokens_remove(tokens_remove(tk, c("can","readers","programme","<","BR","/",">")), pattern = stopwords("en")))
-dfmsu <- dfm_trim(dfmsu,min_termfreq=24)
-# themes <- dfmsu %>%
-#   textstat_frequency() %>%
-#   head(6)
-# nmf <- textmodel_lsa(dfmsv)
-```
-```{r wordcloud, echo=FALSE, message=FALSE}
-textplot_wordcloud(dfmsu)
-```
+# Create a corpus
+sucorpus <- Corpus(VectorSource(df_su$Description))
 
+# Preprocess the text
+sucorpus <- tm_map(sucorpus, content_transformer(tolower))
+sucorpus <- tm_map(sucorpus, removePunctuation)
+sucorpus <- tm_map(sucorpus, removeNumbers)
+sucorpus <- tm_map(sucorpus, removeWords, stopwords("en"))
+sucorpus <- tm_map(sucorpus, removeWords, c("can", "readers", "programme", "br"))
+sucorpus <- tm_map(sucorpus, stripWhitespace)
+
+# Create a Document-Term Matrix
+dtm <- TermDocumentMatrix(sucorpus)
+m <- as.matrix(dtm)
+v <- sort(rowSums(m), decreasing = TRUE)
+d <- data.frame(word = names(v), freq = v)
+```
+```{r echo=FALSE, warning=FALSE}
+# Plot the word cloud
+wordcloud(words = d$word, rot.per=.45, freq = d$freq, min.freq = 24, random.order = FALSE, colors = brewer.pal(8, "Dark2"))
+```
+:::
+:::
