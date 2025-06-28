@@ -21,7 +21,7 @@ book:
   # appendices: 
   cover-image: p0c4lm59.jpg
   favicon: favicon.ico
-  repo-url: https://github.com/NixImagery/Something-Understood
+  # repo-url: https://github.com/NixImagery/Something-Understood
   downloads: [pdf]
   site-url: https://niximagery.github.io/Something-Understood
   navbar: 
@@ -46,7 +46,7 @@ book:
   google-analytics: G-HRRCR9KGPW
 
 bibliography: ../Thesis/thesis.bib
-csl: ../Thesis/chicago-author-date-with-ibid.csl
+csl: ../Thesis/chicago-author-date-no-em-dash.csl
 
 format:
   html:
