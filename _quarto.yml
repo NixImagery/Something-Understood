@@ -43,7 +43,7 @@ book:
   page-navigation: true
   sidebar:
     contents: auto
-  google-analytics: G-HRRCR9KGPW
+  google-analytics: G-SBDYJL4PWN
 
 bibliography: ../Thesis/thesis.bib
 csl: ../Thesis/chicago-author-date-no-em-dash.csl
