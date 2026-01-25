@@ -43,6 +43,14 @@ book:
   sidebar:
     contents: auto
 
+website:
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    type: danger
+    position: below-navbar
+    content: "**Mark Tully 24th October 1935 -- 25th January 2026**<br>It is with great sadness that we learn of the passing Sir Mark Tully, who presented many of the episodes of Something Understood since it became a weekly broadcast in 1995. His vision of probing questions at the heart of our humanity through music, verse, prose and conversation, has brought much comfort and inspiration to so many of us. We grieve the loss of a man of great principle. Rest in peace, sir."
+
 bibliography: ../Thesis/thesis.bib
 csl: ../Thesis/chicago-author-date-no-em-dash.csl
 
